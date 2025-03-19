@@ -1,0 +1,79 @@
+/* Music Player Portion*/
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #121212;
+  color:white;
+  margin: 0;
+  padding: 20px;
+}
+
+.player {
+  position: relative;
+  background-color: #f4f4f4;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  border-color: rgb(74, 5, 124);
+  border-style: double;
+  border-width: 6px;
+  width: 300px;
+  margin: auto;
+}
+
+.controls button {
+  font-size: 20px;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  border-color: rgb(74, 5, 124)
+}
+
+.controls button:hover {
+  background-color: rgba(182, 135, 216, 0.38);
+}
+
+#repeatButton {
+  position: absolute;
+  bottom: 10px; 
+  left: 10px; 
+  font-size: 20px; 
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#repeatButton.active {
+  background-color: rgb(74, 5, 124);
+  border-radius: 25%;
+}
+
+#shuffleButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px; 
+  font-size: 20px; 
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#shuffleButton.active {
+  background-color: rgb(74, 5, 124);
+  border-radius: 25%;
+}
+
+#progressBar {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#albumArt {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px; 
+  display: block;
+  margin: 10px auto;
+}
+
+

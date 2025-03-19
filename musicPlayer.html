@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="musicPlayer.css">
+  <link rel="stylesheet" href="playlistBar.css">
+  <link rel="stylesheet" href="createPlaylist.css">
+  <link rel="stylesheet" href="editPlaylist.css">
+</head>
+<body>
+
+   <!-- Music Player Section-->
+  
+  <div class="player">
+      <h2 id="songTitle">No Song Playing</h2>
+      <img id="albumArt" src="coverArt/default.webp" alt="Album Art">
+      <audio id="audioPlayer" src=""></audio>
+
+
+      <div class="controls">
+        <button id="prevBtn">⏮</button>
+        <button id="playPauseBtn">▶️</button>
+        <button id="nextBtn">⏭</button>
+      </div>
+    
+    <input type="range" id="progressBar" value="0" min="0" max="100">
+    <button id="repeatButton">🔁</button>
+    <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+    <button id= "shuffleButton">🔀</button>
+  </div>
+
+<!-- Sidebar Navigation -->
+<div id="sidebar">
+  <button id="togglePlaylist">☰ Playlists</button>
+  <div id="playlistPanel">
+      <h2>🎵 Playlists</h2>
+      <ul id="playlistList">
+        <li onclick="loadPlaylist('All Songs')">All Songs</li>
+      </ul>
+      <button id="createPlaylistBtn">➕ New Playlist</button>
+
+      <!-- When clicking playlist, show songs-->
+    <div id="playlistSongsContainer">
+      <h3 id="selectedPlaylistTitle">Songs</h3>
+      <input type="text" id="searchInput" placeholder="Search songs...">
+      <ul id="playlistSongs"></ul>
+    </div> 
+  </div>
+</div>
+
+<!-- Creating New Playlist Window -->
+ <div id="playlistModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModalBtn"class="close-modal">&times;</span>
+        <h2 id="createPlaylistHeading">Create New Playlist</h2>
+        <input type="text" id="playlistNameInput" placeholder="Playlist Name">
+
+        <h4>Select songs..</h4>
+        <input type="text" id="searchSongs" placeholder="Search...">
+        <div id="songSelectionList"></div>
+
+        <button id="savePlaylistBtn">Save</button>
+        <button id="cancelPlaylistBtn">Cancel</button>
+    </div>
+ </div>
+</div>
+
+<!-- Edit Playlist Modal -->
+<div id="editPlaylistModal" class="modal">
+  <div class="modal-content">
+      <span id="closeEditModalBtn" class="close-modal">&times;</span>
+      <h2>Edit Playlist</h2>
+      <input type="text" id="editPlaylistNameInput" placeholder="Playlist Name">
+
+      <h3>Modify Songs</h3>
+      <div id="editSongSelectionList"></div>
+
+      <button id="saveEditPlaylistBtn">Save Changes</button>
+      <button id="cancelEditPlaylistBtn">Cancel</button>
+  </div>
+</div>
+
+
+
+ 
+
+<script src="musicPlayer.js"></script>
+<script src="playlistBar.js"></script>
+<script src="createPlaylist.js"></script>
+<script src="editPlaylist.js"></script>
+</body>
+</html>

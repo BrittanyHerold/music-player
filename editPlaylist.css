@@ -1,0 +1,45 @@
+
+/* Ensure modal does not exceed page height */
+#editPlaylistModal {
+  display: none; /* Initially hidden */
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px; /* Adjust as needed */
+  max-height: 80vh; /* Limit modal height to 80% of the viewport */
+  background: rgb(127, 123, 123);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(74, 5, 124);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid white;
+  overflow: hidden; /* Prevent modal from overflowing */
+}
+
+/* Make the modal content scrollable */
+#editPlaylistModal .modal-content {
+  max-height: 70vh; /* Ensures content stays within modal */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding: 10px;
+}
+
+/* Ensure the song list within the modal is scrollable */
+#editSongSelectionList {
+  max-height: 50vh; /* Adjust height limit */
+  overflow-y: auto; /* Enable scrolling */
+  border: 1px solid white;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#editPlaylistButton {
+  display: block;  /* Ensures it's on its own line */
+  margin: 10px auto; /* Centers the button horizontally */
+  text-align: center; /* Ensures the text inside is centered */
+  background-color: rgb(74, 5, 124);
+  color: white;
+  margin-top: 0px;
+}

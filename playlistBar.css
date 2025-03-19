@@ -1,0 +1,120 @@
+/* Playlist Navigation */
+#sidebar {
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #222;
+  padding: 15px;
+  transform: translateX(-250px); 
+  transition: transform 0.3s ease-in-out;
+}
+
+#sidebar.open {
+  transform: translateX(0); 
+}
+
+#togglePlaylist {
+  position: absolute;
+  left: 260px;
+  top: 10px;
+  background:rgb(74, 5, 124);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#playlistPanel {
+  list-style-type: none;
+  padding: 10px;
+}
+
+#playlistList li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #444;
+  color: white;
+}
+
+#playlistList li:hover {
+  background: #333;
+}
+
+#createPlaylistBtn {
+  background:rgb(74, 5, 124);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#songList {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.song-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #444;
+  color: white;
+}
+
+.song-item:hover {
+  background: #333;
+}
+
+.song-thumbnail {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.song-thumbnail[src=""] {
+  content: url("coverArt/default.webp"); 
+}
+
+/* Selected playlist styles */
+#playlistSongsContainer {
+  max-height: 75vh;
+  overflow-y: auto; 
+  scrollbar-width: thin; 
+  scrollbar-color: #888 #f0f0f0; 
+}
+
+/* Scrollbar Styling for Chrome & Edge */
+#playlistSongsContainer::-webkit-scrollbar {
+  width: 8px; 
+}
+
+#playlistSongsContainer::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 4px;
+}
+
+#playlistSongsContainer::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Scrollbar track */
+}
+
+#playlistSongs {
+  list-style: none;
+  padding: 0;
+}
+
+#playlistSongs li {
+  padding: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+#playlistSongs li:hover {
+  background: #444;
+}
