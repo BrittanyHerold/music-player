@@ -64,9 +64,14 @@ saveEditPlaylistBtn.onclick = () => {
 
   console.log(`💾 Updated playlist: "${editingPlaylistName}"`);
 
+ if (currentPlaylist === editingPlaylistName) {
+    loadPlaylist (editingPlaylistName);
+  }; 
+
   // Close modal and refresh playlist
   editPlaylistModal.style.display = "none";
   displayPlaylists();
+ 
 };
 
 
